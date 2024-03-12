@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'alata';
+    src: url('/fonts/Alata-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'jose';
+    src: url('/fonts/JosefinSans-VariableFont_wght.ttf');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+    .grid-auto {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+
+    .smooth-animation {
+        @apply transition duration-300 ease-in-out motion-reduce:transform-none motion-reduce:transition-none;
+    }
+
+    .smoother-animation {
+        @apply transition duration-[2s] ease-out motion-reduce:transform-none motion-reduce:transition-none;
+    }
+}
+
+.scroll-animation {
+    animation: scroll-slide linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: contain -30vh;
+}
+
+.title-popup {
+    translate: 0 100%;
+    animation: title-popup linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 30vh;
+    animation-range-end: contain 40vh;
+}
+
+@keyframes scroll-slide {
+    from {
+        translate: 0;
+    }
+    to {
+        translate: 0 -50%;
+    }
+}
+
+@keyframes title-popup {
+    to {
+        translate: 0;
+    }
+}
+
+.primary-svg {
+    stroke: currentColor;
+    fill: currentColor;
+    width: 20px;
+}
+
+.skills-svg {
+    min-height: 40px;
+    width: 40px;
+}
+
+.project-svg {
+    fill: currentColor;
+    min-height: 25px;
+    width: 25px;
+}
+
+.logo-svg {
+    stroke: currentColor;
+    fill: currentColor;
+    min-height: 75px;
+    width: 75px;
+}

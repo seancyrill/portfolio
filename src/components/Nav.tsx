@@ -38,7 +38,7 @@ function Nav() {
         },
         {
             name: 'LinkedIn',
-            to: '',
+            to: 'http://www.linkedin.com/in/seancyrill',
             vector: '/svg/linkedin-rounded-svgrepo-com.svg',
         },
         {

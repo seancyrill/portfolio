@@ -7,7 +7,7 @@ export type ProjectListType = {
     title: string
     images: string[]
     desc: string
-    features: string[]
+    note: string | null
     tech: {
         name: string
         svg: string
@@ -24,12 +24,8 @@ function Projects() {
         {
             title: 'SHOPPING',
             images: ['/images/ecom-product-page.jpg'],
-            desc: 'Ecommerce site for both buying and selling. Users can set up their own shops for other users to buy.',
-            features: [
-                'User profile functionalies, addresses, reviews & more',
-                'Set up shop with full features',
-                'Guest friendly',
-            ],
+            desc: 'Ecommerce site for both buying and selling. Users can set up their own shops for other users to buy. Guest are welcome!',
+            note: 'Node app is deployed on free Render server that spins down on inactivity, please give it a minute to wake up.',
             tech: [
                 { name: 'react', svg: '/svg/react-svgrepo-com.svg' },
                 {
@@ -56,11 +52,7 @@ function Projects() {
             title: 'Space Tourism',
             images: ['/images/space-tourism2.jpg'],
             desc: 'Travel to SPACE, sit back, and relax because we’ll give you a truly out of this world experience!',
-            features: [
-                'Clean and modern design',
-                'Easy-to-navigate layout',
-                'Clear call-to-action buttons',
-            ],
+            note: 'Navigate easily through the list and pages with scroll/swipe controls. ',
             tech: [
                 { name: 'react', svg: '/svg/react-svgrepo-com.svg' },
                 {
@@ -75,12 +67,8 @@ function Projects() {
         {
             title: 'Rest Countries',
             images: ['/images/rest-countries.jpg'],
-            desc: 'A site working with REST Countries API.',
-            features: [
-                'Filter/Search results by name, region language etc.',
-                'Togglable dark mode',
-                'Border countries in the country page',
-            ],
+            desc: 'A site working with REST Countries API. Filter or search results by name, region language etc. With togglable dark mode.',
+            note: null,
             tech: [
                 { name: 'react', svg: '/svg/react-svgrepo-com.svg' },
                 {

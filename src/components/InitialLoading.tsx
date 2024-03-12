@@ -5,7 +5,7 @@ type InitialLoadingType = {
 function InitialLoading({ ready }: InitialLoadingType) {
     return (
         <div
-            className={`smoother-animation fixed left-0 top-0 z-[1000] flex w-screen select-none flex-col overflow-clip  ${ready ? '-translate-y-full' : 'translate-y-0'}`}
+            className={`smoother-animation fixed left-0 top-0 z-[1000] flex h-[100svh] w-screen select-none flex-col overflow-clip  ${ready ? '-translate-y-full' : 'translate-y-0'}`}
         >
             <div
                 className={`smoother-animation grid h-screen w-full items-end justify-center bg-secondary-neutral`}

@@ -16,7 +16,7 @@ function ProjectBubble({
     setFocusStates,
 }: ProjectBubbleType) {
     const projectRef = useRef<HTMLDivElement>(null)
-    const { desc, ghLink, liveLink, title, images, tech, features } = project
+    const { desc, ghLink, liveLink, title, images, tech, note } = project
 
     function toggleFocus(input?: boolean) {
         setFocusStates((prev) =>
@@ -85,7 +85,7 @@ function ProjectBubble({
                     {ghLink.map(({}, i) => {
                         const href = projectLink('gh', i)
                         return (
-                            <a href={href}>
+                            <a href={href} key={`ghLink${i}`}>
                                 <ReactSVG
                                     src="/svg/github-colored-svgrepo-com.svg"
                                     key={`ghlink${i}`}
@@ -147,18 +147,19 @@ function ProjectBubble({
                         </div>
                     </div>
 
-                    {/* Project Features */}
+                    {/* Project Desc */}
                     <div
                         className={`smooth-animation font-light ${isHovering ? 'translate-y-0 text-primary-neutral' : 'translate-y-1/2 text-transparent'}`}
                     >
-                        <p className="line-clamp-2">{desc}</p>
-                        <ul className="mx-4 list-inside list-disc">
-                            {features.map((bullet, i) => (
-                                <li key={`bullet${i}`} className="truncate">
-                                    {bullet}
-                                </li>
-                            ))}
-                        </ul>
+                        <p className="py-2">{desc}</p>
+
+                        {note && (
+                            <p
+                                className={`border-dashed border-primary-neutral/30 py-2 italic ${isHovering ? 'border-t' : 'border-t-0'}`}
+                            >
+                                ps: {note}
+                            </p>
+                        )}
                     </div>
                 </div>
             </article>

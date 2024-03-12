@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { ReactSVG } from 'react-svg'
 
-const RESUME_LINK = '/files/Letter of Regression.pdf'
+const RESUME_LINK = '/files/SeanDG-Resume.pdf'
 
 function Resume() {
     const dialogRef = useRef<HTMLDialogElement>(null)

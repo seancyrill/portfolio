@@ -19,11 +19,13 @@ function Nav() {
             lastScrollTop.current = currentScrollTop
         }
 
-        window.addEventListener('scroll', handleScroll)
+        handleScroll.length
+
+        /* window.addEventListener('scroll', handleScroll)
 
         return () => {
             window.removeEventListener('scroll', handleScroll)
-        }
+        } */
     }, [])
 
     const links = [

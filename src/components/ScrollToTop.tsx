@@ -4,7 +4,7 @@ import { ReactSVG } from 'react-svg'
 function ScrollToTop() {
     const [isVisible, setIsVisible] = useState(false)
 
-    /* useEffect(() => {
+    useEffect(() => {
         const toggleVisibility = () => {
             if (window.scrollY > window.innerHeight) {
                 !isVisible && setIsVisible(true)
@@ -12,11 +12,12 @@ function ScrollToTop() {
                 isVisible && setIsVisible(false)
             }
         }
+        toggleVisibility.length
 
-        window.addEventListener('scroll', toggleVisibility)
+        /* window.addEventListener('scroll', toggleVisibility)
 
-        return () => window.removeEventListener('scroll', toggleVisibility)
-    }, []) */
+        return () => window.removeEventListener('scroll', toggleVisibility) */
+    }, [])
 
     function scrollToTop() {
         window.scrollTo({

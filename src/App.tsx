@@ -9,13 +9,13 @@ import InitialLoading from './components/InitialLoading'
 
 function App() {
     const [splinesLoaded, setSplinesLoaded] = useState([false, false])
-    const [ready, setReady] = useState(false)
+    const [ready, setReady] = useState(true)
 
     useEffect(() => {
         const loaded = !splinesLoaded.some((state) => !state)
 
         if (loaded) {
-            setReady(true)
+            //setReady(true)
         }
     }, [splinesLoaded])
 

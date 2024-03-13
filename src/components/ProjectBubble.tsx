@@ -32,7 +32,7 @@ function ProjectBubble({
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (!entry.isIntersecting && isHovering) {
+                if (!entry.isIntersecting) {
                     toggleFocus(false)
                 }
             },
@@ -50,7 +50,7 @@ function ProjectBubble({
                 observer.unobserve(projectRef.current)
             }
         }
-    }, [isHovering])
+    }, [])
 
     function projectLink(link: 'gh' | 'live', ghIndex: number = 0) {
         const href = link === 'gh' ? ghLink[ghIndex] : liveLink

@@ -15,9 +15,9 @@ function Nav() {
             const currentScrollTop = document.documentElement.scrollTop
 
             if (currentScrollTop > lastScrollTop) {
-                setScrollDirection('down')
+                scrollDirection === 'up' && setScrollDirection('down')
             } else {
-                setScrollDirection('up')
+                scrollDirection === 'down' && setScrollDirection('up')
             }
 
             lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop

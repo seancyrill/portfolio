@@ -75,7 +75,6 @@ function ProjectBubble({
                 ref={projectRef}
                 onMouseEnter={() => toggleFocus(true)}
                 onMouseLeave={() => toggleFocus(false)}
-                onScroll={() => toggleFocus(false)}
                 onClick={handleProjectClick}
                 className={`relative flex h-[75vh] w-[35%] min-w-[170px] cursor-pointer flex-col bg-primary-neutral bg-transparent text-black ${i === 1 && `scroll-animation scroll-slide`}`}
             >

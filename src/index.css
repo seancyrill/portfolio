@@ -29,7 +29,7 @@
     }
 }
 
-.scroll-animation {
+/* .scroll-animation {
     animation: scroll-slide linear forwards;
     animation-timeline: view();
     animation-range-start: cover;
@@ -57,7 +57,7 @@
     to {
         translate: 0;
     }
-}
+} */
 
 .primary-svg {
     stroke: currentColor;

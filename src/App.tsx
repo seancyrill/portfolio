@@ -23,7 +23,7 @@ function App() {
 
     return (
         <main
-            className={`relative mx-auto flex w-full max-w-screen-2xl flex-col shadow-xl ${!ready && 'max-h-screen overflow-hidden'}`}
+            className={`relative mx-auto flex w-full max-w-screen-2xl flex-col shadow-xl ${!ready && 'max-h-[100svh] overflow-hidden'}`}
         >
             <InitialLoading ready={ready} />
             <Nav />

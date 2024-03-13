@@ -9,13 +9,11 @@ function SeanKb({ setSplinesLoaded }: SeanKbType) {
         <Spline
             scene="https://prod.spline.design/f6yoVX8kfTXlrFTL/scene.splinecode"
             className="absolute"
-            onLoad={() => {
-                console.log('SeanKB: onload works'),
-                    setSplinesLoaded((prev) =>
-                        prev.map((state, i) => (i === 1 ? true : state))
-                    )
-            }}
-            onStart={() => console.log('SeanKB: onStart works')}
+            onLoad={() =>
+                setSplinesLoaded((prev) =>
+                    prev.map((state, i) => (i === 1 ? true : state))
+                )
+            }
         />
     )
 }

@@ -9,7 +9,7 @@ import InitialLoading from './components/InitialLoading'
 
 function App() {
     const [splinesLoaded, setSplinesLoaded] = useState([false, false])
-    const [ready, setReady] = useState(true)
+    const [ready, setReady] = useState(false)
 
     useEffect(() => {
         const loaded = !splinesLoaded.some((state) => !state)
@@ -30,7 +30,6 @@ function App() {
             <Welcome setSplinesLoaded={setSplinesLoaded} />
             <Skills />
             <Projects />
-            {/* <About /> */}
             <Contact setSplinesLoaded={setSplinesLoaded} />
             <ScrollToTop />
         </main>

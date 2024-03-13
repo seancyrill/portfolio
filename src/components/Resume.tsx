@@ -56,7 +56,9 @@ function Resume() {
                         >
                             <button
                                 className="h-full  px-6 py-2"
-                                onClick={() => toggleOptions()}
+                                onClick={(e) => (
+                                    e.preventDefault(), toggleOptions()
+                                )}
                             >
                                 <ReactSVG
                                     beforeInjection={(svg) => {

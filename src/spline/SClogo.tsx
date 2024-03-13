@@ -9,11 +9,13 @@ function SClogo({ setSplinesLoaded }: SClogoType) {
         <Spline
             scene="https://prod.spline.design/GKsVbS96YU2i9aac/scene.splinecode"
             className="absolute"
-            onStart={() =>
-                setSplinesLoaded((prev) =>
-                    prev.map((state, i) => (i === 0 ? true : state))
-                )
-            }
+            onStart={() => {
+                console.log('SClogo: onStart works'),
+                    setSplinesLoaded((prev) =>
+                        prev.map((state, i) => (i === 0 ? true : state))
+                    )
+            }}
+            onLoad={() => console.log('SClogo: onLoad works')}
         />
     )
 }

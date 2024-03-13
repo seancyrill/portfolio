@@ -15,7 +15,7 @@ function App() {
         const loaded = !splinesLoaded.some((state) => !state)
 
         if (loaded) {
-            //setReady(true)
+            setReady(true)
         }
     }, [splinesLoaded])
 

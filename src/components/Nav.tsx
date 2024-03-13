@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ReactSVG } from 'react-svg'
 import Sidebar from './Sidebar'
 import Resume from './Resume'
@@ -6,21 +6,17 @@ import Resume from './Resume'
 function Nav() {
     const [openSideBar, setOpenSideBar] = useState(false)
     const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('up')
+    const lastScrollTop = useRef(0)
 
     //hides nav on scroll down
     useEffect(() => {
-        let lastScrollTop = 0
-
         const handleScroll = () => {
             const currentScrollTop = document.documentElement.scrollTop
+            const direction =
+                currentScrollTop > lastScrollTop.current ? 'down' : 'up'
 
-            if (currentScrollTop > lastScrollTop) {
-                scrollDirection === 'up' && setScrollDirection('down')
-            } else {
-                scrollDirection === 'down' && setScrollDirection('up')
-            }
-
-            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop
+            setScrollDirection(direction)
+            lastScrollTop.current = currentScrollTop
         }
 
         window.addEventListener('scroll', handleScroll)

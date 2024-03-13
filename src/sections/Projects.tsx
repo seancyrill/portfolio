@@ -124,7 +124,7 @@ function Projects() {
                         ))}
                     </div>
 
-                    <div className="flex min-h-screen flex-col justify-around">
+                    <div className="flex min-h-[100svh] flex-col justify-around">
                         <div />
                         <div className="flex flex-col items-end justify-center gap-3 overflow-hidden whitespace-nowrap text-sm text-secondary-neutral sm:text-xl">
                             <MovingDashedBorder />

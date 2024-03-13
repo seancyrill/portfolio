@@ -68,7 +68,7 @@ function Skills() {
             <div className="h-40 bg-gradient-to-t from-secondary-neutral to-primary-neutral" />
             <section
                 id="skills"
-                className="min-h-screen select-none overflow-hidden bg-secondary-neutral"
+                className="min-h-[100svh] select-none overflow-hidden bg-secondary-neutral"
             >
                 <div className="flex h-[50vh] items-end px-4">
                     <h3 className="flex w-full items-center justify-between gap-4 font-header text-4xl font-light text-primary-neutral">

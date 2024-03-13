@@ -8,7 +8,7 @@ function Welcome({ setSplinesLoaded }: WelcomeType) {
     return (
         <section
             id="welcome"
-            className="relative min-h-screen overflow-hidden px-1 md:px-4"
+            className="relative min-h-[100svh] overflow-hidden px-1 md:px-4"
         >
             <div className="relative mt-[70px] flex h-[calc(100vh-78px)] gap-4 rounded-[2.5rem] bg-secondary-neutral text-primary-neutral ">
                 <div className="relative h-full w-full">

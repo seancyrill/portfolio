@@ -18,7 +18,7 @@ export type ProjectListType = {
 
 function Projects() {
     const [focusStates, setFocusStates] = useState([false, false, false])
-    const isFocusing = focusStates.some((val) => val)
+    //const isFocusing = focusStates.some((val) => val)
 
     const list = [
         {
@@ -98,7 +98,7 @@ function Projects() {
     return (
         <>
             <section id="projects" className="relative min-h-screen">
-                {/* <div className="sticky left-0 top-0 z-0 grid min-h-screen w-full select-none place-content-center">
+                <div className="sticky left-0 top-0 z-0 grid min-h-[100svh] w-full select-none place-content-center">
                     <span className="overflow-clip">
                         <h1
                             className={`title-popup text-center text-titleWall`}
@@ -106,11 +106,11 @@ function Projects() {
                             PROJECTS
                         </h1>
                     </span>
-                </div> */}
+                </div>
                 <div className="h-40 bg-gradient-to-t from-secondary-neutral to-primary-neutral" />
 
                 <div
-                    className={`smooth-animation relative pt-[50vh] backdrop-invert ${isFocusing ? 'backdrop-blur-2xl' : 'backdrop-blur-sm'}`}
+                    className={`smooth-animation relative pt-[50vh] backdrop-invert`}
                 >
                     <div className="">
                         {list.map((project, i) => (

@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { ProjectListType } from '../sections/Projects'
-import { ReactSVG } from 'react-svg'
+//import { ReactSVG } from 'react-svg'
 
 type ProjectBubbleType = {
     i: number
@@ -16,7 +16,7 @@ function ProjectBubble({
     setFocusStates,
 }: ProjectBubbleType) {
     const projectRef = useRef<HTMLDivElement>(null)
-    const { desc, ghLink, liveLink, title, images, tech, note } = project
+    const { desc, ghLink, liveLink, title, images, note } = project
 
     function toggleFocus(input?: boolean) {
         setFocusStates((prev) =>
@@ -76,10 +76,10 @@ function ProjectBubble({
                 onMouseEnter={() => toggleFocus(true)}
                 onMouseLeave={() => toggleFocus(false)}
                 onClick={handleProjectClick}
-                className={`relative flex h-[75vh] w-[35%] min-w-[170px] cursor-pointer flex-col bg-primary-neutral bg-transparent text-black ${i === 1 && `scroll-animation scroll-slide`}`}
+                className={`relative flex h-[75vh] w-[35%] min-w-[170px] cursor-pointer flex-col bg-transparent text-black ${i === 1 && `scroll-animation scroll-slide`}`}
             >
                 {/* Project links */}
-                <div
+                {/* <div
                     className={`smooth-animation absolute left-0 top-0 flex origin-bottom -translate-y-full scale-y-0 gap-1 ${isHovering && 'scale-y-100'}`}
                 >
                     {ghLink.map(({}, i) => {
@@ -106,7 +106,7 @@ function ProjectBubble({
                             }}
                         />
                     </a>
-                </div>
+                </div> */}
 
                 {/* Project Img */}
                 <div className="h-full w-full overflow-hidden">
@@ -129,7 +129,7 @@ function ProjectBubble({
                         <h2 className="py-2 text-xl font-bold md:w-1/2">
                             {title}
                         </h2>
-                        <div className="flex flex-wrap items-center gap-4 md:m-1 md:w-1/2 md:justify-end">
+                        {/* <div className="flex flex-wrap items-center gap-4 md:m-1 md:w-1/2 md:justify-end">
                             {tech.map(({ svg }, i) => (
                                 <div
                                     key={i}
@@ -144,7 +144,7 @@ function ProjectBubble({
                                     />
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Project Desc */}

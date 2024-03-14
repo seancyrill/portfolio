@@ -18,7 +18,7 @@ export type ProjectListType = {
 
 function Projects() {
     const [focusStates, setFocusStates] = useState([false, false, false])
-    //const isFocusing = focusStates.some((val) => val)
+    const isFocusing = focusStates.some((val) => val)
 
     const list = [
         {
@@ -101,7 +101,7 @@ function Projects() {
                 <div className="sticky left-0 top-0 z-0 grid min-h-[100svh] w-full select-none place-content-center">
                     <span className="overflow-clip">
                         <h1
-                            className={`title-popup text-center text-titleWall`}
+                            className={`title-popup smooth-animation text-center text-titleWall ${isFocusing ? 'text-secondary-neutral/10' : 'text-secondary-neutral'}`}
                         >
                             PROJECTS
                         </h1>

@@ -8,7 +8,7 @@ function SeanKb({ setSplinesLoaded }: SeanKbType) {
     return (
         <Spline
             scene="https://prod.spline.design/f6yoVX8kfTXlrFTL/scene.splinecode"
-            className="absolute"
+            className="absolute hidden"
             onLoad={() =>
                 setSplinesLoaded((prev) =>
                     prev.map((state, i) => (i === 1 ? true : state))

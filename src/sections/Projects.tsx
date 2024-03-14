@@ -19,7 +19,6 @@ export type ProjectListType = {
 function Projects() {
     const [focusStates, setFocusStates] = useState([false, false, false])
     const isFocusing = focusStates.some((val) => val)
-    isFocusing.valueOf
 
     const list = [
         {
@@ -111,9 +110,9 @@ function Projects() {
                 <div className="h-40 bg-gradient-to-t from-secondary-neutral to-primary-neutral" />
 
                 <div
-                    className={`smooth-animation relative pt-[50vh] `} //backdrop-invert ${isFocusing ? 'backdrop-blur-2xl' : 'backdrop-blur-sm'}
+                    className={`smooth-animation relative pt-[50vh] backdrop-invert ${isFocusing ? 'backdrop-blur-2xl' : 'backdrop-blur-sm'}`}
                 >
-                    <div className="">
+                    {/* <div className="">
                         {list.map((project, i) => (
                             <ProjectBubble
                                 i={i}
@@ -123,7 +122,7 @@ function Projects() {
                                 setFocusStates={setFocusStates}
                             />
                         ))}
-                    </div>
+                    </div> */}
 
                     <div className="flex min-h-[100svh] flex-col justify-around">
                         <div />

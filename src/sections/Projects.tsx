@@ -19,6 +19,7 @@ export type ProjectListType = {
 function Projects() {
     const [focusStates, setFocusStates] = useState([false, false, false])
     const isFocusing = focusStates.some((val) => val)
+    isFocusing.valueOf
 
     const list = [
         {

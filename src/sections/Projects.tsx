@@ -1,6 +1,6 @@
-import { ReactSVG } from 'react-svg'
+//import { ReactSVG } from 'react-svg'
 import ProjectBubble from '../components/ProjectBubble'
-import MovingDashedBorder from '../components/MovingDashedBorder'
+//import MovingDashedBorder from '../components/MovingDashedBorder'
 import { useState } from 'react'
 
 export type ProjectListType = {
@@ -82,7 +82,7 @@ function Projects() {
         },
     ]
 
-    const endLinks = [
+    /* const endLinks = [
         {
             to: 'https://github.com/seancyrill',
             name: 'My Reposities',
@@ -93,7 +93,7 @@ function Projects() {
             name: 'Challenges Conquered',
             src: '/svg/frontend-mentor-seeklogo.svg',
         },
-    ]
+    ] */
 
     return (
         <>
@@ -124,7 +124,7 @@ function Projects() {
                         ))}
                     </div>
 
-                    <div className="flex min-h-[100svh] flex-col justify-around">
+                    {/* <div className="flex min-h-[100svh] flex-col justify-around">
                         <div />
                         <div className="flex flex-col items-end justify-center gap-3 overflow-hidden whitespace-nowrap text-sm text-secondary-neutral sm:text-xl">
                             <MovingDashedBorder />
@@ -149,7 +149,7 @@ function Projects() {
                             </div>
                             <MovingDashedBorder reverse={true} />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
             <div className="h-40 bg-gradient-to-b from-secondary-neutral to-primary-neutral" />

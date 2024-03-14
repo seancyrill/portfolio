@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Nav from './components/Nav'
 import ScrollToTop from './components/ScrollToTop'
 import Contact from './sections/Contact'
-import Projects from './sections/Projects'
+//import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import Welcome from './sections/Welcome'
 import InitialLoading from './components/InitialLoading'
@@ -29,11 +29,10 @@ function App() {
             <Nav />
             <Welcome setSplinesLoaded={setSplinesLoaded} />
             <Skills />
-            <Projects />
+            {/* <Projects /> */}
             <Contact setSplinesLoaded={setSplinesLoaded} />
             <ScrollToTop />
         </main>
     )
 }
-;``
 export default App

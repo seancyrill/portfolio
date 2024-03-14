@@ -1,5 +1,5 @@
 import { ReactSVG } from 'react-svg'
-//import ProjectBubble from '../components/ProjectBubble'
+import ProjectBubble from '../components/ProjectBubble'
 import MovingDashedBorder from '../components/MovingDashedBorder'
 import { useState } from 'react'
 
@@ -94,8 +94,6 @@ function Projects() {
             src: '/svg/frontend-mentor-seeklogo.svg',
         },
     ]
-    setFocusStates
-    list
 
     return (
         <>
@@ -114,7 +112,7 @@ function Projects() {
                 <div
                     className={`smooth-animation relative pt-[50vh] backdrop-invert ${isFocusing ? 'backdrop-blur-2xl' : 'backdrop-blur-sm'}`}
                 >
-                    {/* <div className="">
+                    <div className="">
                         {list.map((project, i) => (
                             <ProjectBubble
                                 i={i}
@@ -124,7 +122,7 @@ function Projects() {
                                 setFocusStates={setFocusStates}
                             />
                         ))}
-                    </div> */}
+                    </div>
 
                     <div className="flex min-h-[100svh] flex-col justify-around">
                         <div />

@@ -30,7 +30,7 @@ const list = [
             },
             { name: 'tailwind', svg: '/svg/tailwind-svgrepo-com.svg' },
             { name: 'node', svg: '/svg/node-js-svgrepo-com.svg' },
-            { name: 'express', svg: '/svg/express-svgrepo-com.svg' },
+            { name: 'express', svg: '/svg/express-svgrepo-com-white.svg' },
             { name: 'postgresql', svg: '/svg/postgresql-icon.svg' },
             { name: 'JWT', svg: '/svg/jwt-3.svg' },
             {

@@ -135,13 +135,18 @@ function ProjectBubble({
                                     key={i}
                                     className="flex-col items-center justify-center"
                                 >
-                                    <ReactSVG
+                                    <img
+                                        src={svg}
+                                        alt="techlogo"
+                                        className="size-6"
+                                    />
+                                    {/* <ReactSVG
                                         src={svg}
                                         className="grid place-content-center"
                                         beforeInjection={(svg) => {
                                             svg.classList.add('project-svg')
                                         }}
-                                    />
+                                    /> */}
                                 </div>
                             ))}
                         </div>

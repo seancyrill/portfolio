@@ -19,8 +19,6 @@ function App() {
         }
     }, [splinesLoaded])
 
-    console.log(splinesLoaded)
-
     return (
         <main
             className={`relative mx-auto flex w-full max-w-screen-2xl flex-col shadow-xl ${!ready && 'max-h-[100svh] overflow-hidden'}`}

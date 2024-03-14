@@ -44,6 +44,10 @@ export default {
                 'infinite-scroll-slower': 'infinite-scroll 20s linear infinite',
                 'infinite-scroll-slower-reverse':
                     'infinite-scroll-reverse 20s linear infinite',
+                'infinite-scroll-slowest':
+                    'infinite-scroll 40s linear infinite',
+                'infinite-scroll-slowest-reverse':
+                    'infinite-scroll-reverse 40s linear infinite',
                 'grow-in-out': 'grow-in-out 1s linear',
             },
             fontSize: {

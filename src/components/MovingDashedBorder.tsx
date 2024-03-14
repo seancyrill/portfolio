@@ -9,7 +9,7 @@ function MovingDashedBorder({ reverse }: MovingDashedBorderType) {
         >
             {[...Array(2)].map((_, i) => (
                 <div
-                    className={`w-screen ${reverse ? 'animate-infinite-scroll' : 'animate-infinite-scroll-reverse'} border-t-4 border-dashed border-primary-neutral`}
+                    className={`w-screen ${reverse ? 'animate-infinite-scroll-slowest' : 'animate-infinite-scroll-slowest-reverse'} border-t-4 border-dashed border-primary-neutral`}
                     key={`border${i}`}
                 />
             ))}

@@ -1,5 +1,5 @@
 import { ReactSVG } from 'react-svg'
-import ProjectBubble from '../components/ProjectBubble'
+//import ProjectBubble from '../components/ProjectBubble'
 import MovingDashedBorder from '../components/MovingDashedBorder'
 import { useState } from 'react'
 
@@ -94,6 +94,8 @@ function Projects() {
             src: '/svg/frontend-mentor-seeklogo.svg',
         },
     ]
+    setFocusStates
+    list
 
     return (
         <>

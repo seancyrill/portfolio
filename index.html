@@ -8,6 +8,12 @@
         <title>Sean DG | Web Developer</title>
     </head>
     <body>
+        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <input required type="hidden" name="form-name" value="contact" />
+            <input required type="text" name="name" />
+            <input required type="email" name="email" />
+            <textarea required name="message"></textarea>
+        </form>
         <div id="root" class="flex flex-col font-main"></div>
         <script type="module" src="/src/main.tsx"></script>
     </body>

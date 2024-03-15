@@ -1,3 +1,8 @@
+import { ReactSVG } from 'react-svg'
+import ProjectBubble from '../components/ProjectBubble'
+import MovingDashedBorder from '../components/MovingDashedBorder'
+import { useState } from 'react'
+
 export type ProjectListType = {
     title: string
     images: string[]
@@ -87,22 +92,68 @@ const endLinks = [
 ]
 
 function Projects() {
-    return (
-        <section className="relative">
-            <div className="sticky left-0 top-0 grid min-h-[100svh] select-none place-content-center">
-                <h1 className="smooth-animation text-center text-titleWall">
-                    PROJECTS
-                </h1>
-            </div>
+    const [focusStates, setFocusStates] = useState([false, false, false])
+    const isFocusing = focusStates.some((val) => val)
 
-            <div className="pt-[50svh] backdrop-invert">
-                <div>
-                    {list.map(({ title }, i) => (
-                        <h2 className="min-h-[100svh] border">{title}</h2>
-                    ))}
+    return (
+        <>
+            <section className="relative min-h-screen">
+                <div className="sticky left-0 top-0 z-0 grid min-h-screen w-full select-none place-content-center">
+                    <span className="overflow-clip">
+                        <h1
+                            className={`title-popup smooth-animation text-center text-titleWall ${isFocusing ? 'text-secondary-neutral/10' : 'text-secondary-neutral'}`}
+                        >
+                            PROJECTS
+                        </h1>
+                    </span>
                 </div>
-            </div>
-        </section>
+                <div className="h-40 bg-gradient-to-t from-secondary-neutral to-primary-neutral" />
+
+                <div
+                    className={`smooth-animation relative pt-[50svh] backdrop-invert`}
+                >
+                    <div className="">
+                        {list.map((project, i) => (
+                            <ProjectBubble
+                                i={i}
+                                project={project}
+                                key={`project${i}`}
+                                isHovering={focusStates[i]}
+                                setFocusStates={setFocusStates}
+                            />
+                        ))}
+                    </div>
+
+                    <div className="flex min-h-screen flex-col justify-around">
+                        <div />
+                        <div className="flex flex-col items-end justify-center gap-3 overflow-hidden whitespace-nowrap text-sm text-secondary-neutral sm:text-xl">
+                            <MovingDashedBorder />
+                            <div className="flex w-full items-center justify-around gap-4 border-y border-primary-neutral p-2 text-primary-neutral">
+                                {endLinks.map(({ name, src, to }, i) => (
+                                    <a
+                                        className="smooth-animation flex items-center gap-2 rounded-2xl p-2 hover:bg-primary-neutral hover:text-secondary-neutral"
+                                        href={to}
+                                        target="_blank"
+                                        key={`endlink${i}`}
+                                    >
+                                        <ReactSVG
+                                            src={src}
+                                            className="fill-current"
+                                            beforeInjection={(svg) => {
+                                                svg.classList.add('primary-svg')
+                                            }}
+                                        />
+                                        <p>{name}</p>
+                                    </a>
+                                ))}
+                            </div>
+                            <MovingDashedBorder reverse={true} />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div className="h-40 bg-gradient-to-b from-secondary-neutral to-primary-neutral" />
+        </>
     )
 }
 

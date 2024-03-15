@@ -14,9 +14,9 @@ function ScrollToTop() {
         }
         toggleVisibility.length
 
-        /* window.addEventListener('scroll', toggleVisibility)
+        window.addEventListener('scroll', toggleVisibility)
 
-        return () => window.removeEventListener('scroll', toggleVisibility) */
+        return () => window.removeEventListener('scroll', toggleVisibility)
     }, [])
 
     function scrollToTop() {

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { ProjectListType } from '../sections/oldProjects'
+import { ProjectListType } from '../sections/Projects'
 import { ReactSVG } from 'react-svg'
 
 type ProjectBubbleType = {
@@ -140,13 +140,6 @@ function ProjectBubble({
                                         alt="techlogo"
                                         className="size-6"
                                     />
-                                    {/* <ReactSVG
-                                        src={svg}
-                                        className="grid place-content-center"
-                                        beforeInjection={(svg) => {
-                                            svg.classList.add('project-svg')
-                                        }}
-                                    /> */}
                                 </div>
                             ))}
                         </div>

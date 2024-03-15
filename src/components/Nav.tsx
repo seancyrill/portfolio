@@ -21,11 +21,11 @@ function Nav() {
 
         handleScroll.length
 
-        /* window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll)
 
         return () => {
             window.removeEventListener('scroll', handleScroll)
-        } */
+        }
     }, [])
 
     const links = [

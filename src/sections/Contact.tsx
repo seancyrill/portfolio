@@ -36,6 +36,7 @@ function Contact({ setSplinesLoaded }: ContactType) {
                     <div className="flex flex-col place-content-center gap-2 sm:gap-4">
                         <label className="sr-only">Name</label>
                         <input
+                            required
                             type="text"
                             name="name"
                             placeholder="Company | Name"
@@ -44,6 +45,7 @@ function Contact({ setSplinesLoaded }: ContactType) {
 
                         <label className="sr-only">Email</label>
                         <input
+                            required
                             name="email"
                             type="email"
                             placeholder="Email"
@@ -51,10 +53,13 @@ function Contact({ setSplinesLoaded }: ContactType) {
                         />
                         <label className="sr-only">Message</label>
                         <textarea
+                            required
                             name="message"
                             placeholder="Message"
                             className="z-10 border-x border-primary-neutral bg-transparent px-4 py-2 focus:outline-none"
                         />
+
+                        <div data-netlify-recaptcha="true"></div>
                         <button>Send</button>
                     </div>
                 </form>

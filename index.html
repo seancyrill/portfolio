@@ -9,10 +9,11 @@
     </head>
     <body>
         <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-            <input required type="hidden" name="form-name" value="contact" />
-            <input required type="text" name="name" />
-            <input required type="email" name="email" />
-            <textarea required name="message"></textarea>
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <textarea name="message"></textarea>
+            <div data-netlify-recaptcha="true"></div>
         </form>
         <div id="root" class="flex flex-col font-main"></div>
         <script type="module" src="/src/main.tsx"></script>

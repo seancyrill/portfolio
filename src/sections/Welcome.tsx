@@ -10,7 +10,7 @@ function Welcome({ setSplinesLoaded }: WelcomeType) {
             id="welcome"
             className="relative min-h-[100svh] overflow-hidden px-1 md:px-4"
         >
-            <div className="relative mt-[70px] flex h-[calc(100vh-78px)] gap-4 rounded-[2.5rem] bg-secondary-neutral text-primary-neutral ">
+            <div className="relative mt-[70px] flex h-[calc(100svh-78px)] gap-4 rounded-[2.5rem] bg-secondary-neutral text-primary-neutral ">
                 <div className="relative h-full w-full">
                     <SClogo setSplinesLoaded={setSplinesLoaded} />
                 </div>

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { ProjectListType } from '../sections/Projects'
+import { ProjectListType } from '../sections/oldProjects'
 import { ReactSVG } from 'react-svg'
 
 type ProjectBubbleType = {

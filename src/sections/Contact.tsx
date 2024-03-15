@@ -62,7 +62,7 @@ function Contact({ setSplinesLoaded }: ContactType) {
                         />
 
                         <div data-netlify-recaptcha="true"></div>
-                        <button>Send</button>
+                        <button type="submit">Send</button>
                     </form>
                 </div>
 

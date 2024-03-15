@@ -22,18 +22,27 @@ function Contact({ setSplinesLoaded }: ContactType) {
             className="flex min-h-screen p-1 md:p-4"
         >
             <div className="relative flex w-full rounded-3xl bg-secondary-neutral text-primary-neutral portrait:flex-col landscape:flex-row">
-                <form
-                    className="relative flex flex-col justify-center gap-4 border-primary-neutral px-8 py-2 sm:py-8 portrait:h-1/2 portrait:w-full portrait:border-b landscape:h-full landscape:w-1/2 landscape:border-r"
-                    name="contact"
-                    method="POST"
-                >
+                <div className="relative flex flex-col justify-center gap-4 border-primary-neutral px-8 py-2 sm:py-8 portrait:h-1/2 portrait:w-full portrait:border-b landscape:h-full landscape:w-1/2 landscape:border-r">
                     {/* for netlify form detection */}
-                    <input type="hidden" name="form-name" value="contact" />
 
                     <h1 className="w-full p-2 font-header text-6xl font-bold sm:p-8 sm:text-8xl xl:text-[8rem] portrait:text-center landscape:text-right">
                         GET IN TOUCH
                     </h1>
-                    <div className="flex flex-col place-content-center gap-2 sm:gap-4">
+
+                    <form
+                        className="flex flex-col place-content-center gap-2 sm:gap-4"
+                        name="contact"
+                        method="post"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        data-netlify-recaptcha="true"
+                    >
+                        <input type="hidden" name="form-name" value="contact" />
+
+                        <div hidden>
+                            <input name="bot-field" />
+                        </div>
+
                         <label className="sr-only">Name</label>
                         <input
                             required
@@ -61,8 +70,8 @@ function Contact({ setSplinesLoaded }: ContactType) {
 
                         <div data-netlify-recaptcha="true"></div>
                         <button>Send</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
 
                 <div className="relative flex flex-col items-center justify-center text-right font-header font-light  portrait:h-1/2 portrait:w-full landscape:h-full landscape:w-1/2">
                     <div className="relative grid w-full place-content-center portrait:h-2/3 landscape:h-1/2">

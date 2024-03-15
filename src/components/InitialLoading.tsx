@@ -17,7 +17,7 @@ function InitialLoading({ ready }: InitialLoadingType) {
                     >
                         {[...Array(2)].map((_, i) => (
                             <div
-                                className={`mr-4 w-screen animate-infinite-scroll-slower-reverse border-t-8 ${ready ? 'border' : 'border-dotted'} border-primary-darker`}
+                                className={`mr-2 w-screen animate-infinite-scroll-slower-reverse border-t-8 ${ready ? 'border' : 'border-dotted'} border-primary-darker`}
                                 key={i}
                             />
                         ))}

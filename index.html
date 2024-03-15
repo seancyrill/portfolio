@@ -8,16 +8,19 @@
         <title>Sean DG | Web Developer</title>
     </head>
     <body>
-        <!-- for netlify form detection -->
         <form
             name="contact"
             netlify
-            data-netlify-honeypot="bot-field"
+            netlify-honeypot="bot-field"
             data-netlify-recaptcha="true"
             hidden
-        ></form>
-        <!-- for netlify form detection -->
-
+        >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <textarea name="message"></textarea>
+            <div data-netlify-recaptcha="true"></div>
+        </form>
         <div id="root" class="flex flex-col font-main"></div>
         <script type="module" src="/src/main.tsx"></script>
     </body>

@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { ProjectListType } from '../sections/Projects'
 import { ReactSVG } from 'react-svg'
 
@@ -28,7 +28,7 @@ function ProjectBubble({
         )
     }
 
-    /* //unfocuses project when its going out of view(for mobile)
+    //unfocuses project when its going out of view(for mobile)
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -50,7 +50,7 @@ function ProjectBubble({
                 observer.unobserve(projectRef.current)
             }
         }
-    }, []) */
+    }, [])
 
     function projectLink(link: 'gh' | 'live', ghIndex: number = 0) {
         const href = link === 'gh' ? ghLink[ghIndex] : liveLink
@@ -75,7 +75,6 @@ function ProjectBubble({
                 ref={projectRef}
                 onMouseEnter={() => toggleFocus(true)}
                 onMouseLeave={() => toggleFocus(false)}
-                onClick={handleProjectClick}
                 className={`relative flex h-[75vh] w-[35%] min-w-[170px] cursor-pointer flex-col bg-transparent text-black ${i === 1 && `scroll-animation scroll-slide`}`}
             >
                 {/* Project links */}
@@ -109,7 +108,10 @@ function ProjectBubble({
                 </div>
 
                 {/* Project Img */}
-                <div className="h-full w-full overflow-hidden">
+                <div
+                    className="h-full w-full overflow-hidden"
+                    onClick={handleProjectClick}
+                >
                     <div
                         className={`smooth-animation relative h-full w-full overflow-hidden ${isHovering && '-translate-y-[100px]'}`}
                     >
@@ -124,6 +126,7 @@ function ProjectBubble({
                 {/* Project Headers */}
                 <div
                     className={`smooth-animation smooth-animation relative left-0 top-0 flex w-full origin-top-left flex-col justify-between bg-transparent text-primary-neutral hover:scale-100 ${isHovering && '-translate-y-[100px]'}`}
+                    onClick={handleProjectClick}
                 >
                     <div className="flex w-full flex-col justify-between md:flex-row md:gap-2">
                         <h2 className="py-2 text-xl font-bold md:w-1/2">

@@ -50,15 +50,15 @@ function Resume() {
                     <menu className="over absolute right-0 top-0 flex justify-end divide-x rounded-3xl bg-primary-neutral">
                         <li
                             className={`relative rounded-l-3xl ${showOptions ? 'bg-primary bg-opacity-45' : ''}`}
-                            onMouseEnter={() => setShowOptions(true)}
-                            onMouseLeave={() => setShowOptions(false)}
-                            onBlur={() => setShowOptions(false)}
                         >
                             <button
                                 className="h-full  px-6 py-2"
                                 onClick={(e) => (
                                     e.preventDefault(), toggleOptions()
                                 )}
+                                onBlur={() => setShowOptions(false)}
+                                onMouseEnter={() => setShowOptions(true)}
+                                onMouseLeave={() => setShowOptions(false)}
                             >
                                 <ReactSVG
                                     beforeInjection={(svg) => {

@@ -4,6 +4,7 @@ export default {
     theme: {
         extend: {
             screens: {
+                XXS: { raw: '(min-width: 400px)' },
                 XS: { raw: '(min-width: 450px)' },
             },
             colors: {

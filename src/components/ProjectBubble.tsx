@@ -84,7 +84,7 @@ function ProjectBubble({
                     {ghLink.map(({}, i) => {
                         const href = projectLink('gh', i)
                         return (
-                            <a href={href} key={`ghLink${i}`}>
+                            <a href={href} key={`ghLink${i}`} target="_blank">
                                 <ReactSVG
                                     src="/svg/github-colored-svgrepo-com.svg"
                                     key={`ghlink${i}`}
@@ -96,7 +96,7 @@ function ProjectBubble({
                             </a>
                         )
                     })}
-                    <a href={projectLink('live')}>
+                    <a href={projectLink('live')} target="_blank">
                         <ReactSVG
                             src="/svg/open.svg"
                             className="rounded-t-full bg-primary-neutral bg-opacity-30 px-2 py-1 text-primary-neutral"

@@ -97,7 +97,7 @@ function Projects() {
 
     return (
         <>
-            <section className="relative min-h-screen">
+            <section className="relative min-h-screen" id="projects">
                 <div className="sticky left-0 top-0 z-0 grid min-h-screen w-full select-none place-content-center">
                     <span className="overflow-clip">
                         <h1

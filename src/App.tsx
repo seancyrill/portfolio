@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import Nav from './components/Nav'
-import ScrollToTop from './components/ScrollToTop'
 import Contact from './sections/Contact'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
@@ -29,7 +28,6 @@ function App() {
             <Skills />
             <Projects />
             <Contact setSplinesLoaded={setSplinesLoaded} />
-            <ScrollToTop />
         </main>
     )
 }

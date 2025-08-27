@@ -6,35 +6,41 @@ function Skills() {
 
     const list = [
         {
-            title: 'Frontend',
+            title: 'Languages & DB',
             logo: '/svg/guest-star-svgrepo-com.svg',
             skills: [
-                { name: 'React JS', svg: '/svg/react-svgrepo-com.svg' },
-                { name: 'Javascript', svg: '/svg/js-svgrepo-com.svg' },
                 {
                     name: 'Typescript',
                     svg: '/svg/typescript-official-svgrepo-com.svg',
                 },
+                { name: 'PostgreSQL', svg: '/svg/postgresql-icon.svg' },
+                { name: 'Javascript', svg: '/svg/js-svgrepo-com.svg' },
                 { name: 'HTML5', svg: '/svg/html-5-svgrepo-com.svg' },
                 { name: 'CSS3', svg: '/svg/css-3-svgrepo-com.svg' },
-                { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
+                { name: '', svg: '' },
             ],
         },
         {
-            title: 'Backend',
+            title: 'Frameworks',
             logo: '/svg/laboratory-svgrepo-com.svg',
             skills: [
-                { name: 'Node JS', svg: '/svg/node-js-svgrepo-com.svg' },
+                { name: 'Next.js', svg: '/svg/next-js-svgrepo-com.svg' },
+                { name: 'React.js', svg: '/svg/react-svgrepo-com.svg' },
+                { name: 'Node.js', svg: '/svg/node-js-svgrepo-com.svg' },
                 { name: 'Express', svg: '/svg/express-svgrepo-com.svg' },
-                { name: 'PostgreSQL', svg: '/svg/postgresql-icon.svg' },
+                { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
+                { name: 'Prisma', svg: '/svg/prisma-svgrepo-com.svg' },
+                { name: 'Axios', svg: '/svg/axios.svg' },
+                { name: 'JWT', svg: '/svg/jwt-3.svg' },
+                { name: '', svg: '' },
             ],
         },
         {
-            title: 'Other',
+            title: 'Tools',
             logo: '/svg/startup-rocket-svgrepo-com.svg',
             skills: [
-                { name: 'Github', svg: '/svg/github-colored-svgrepo-com.svg' },
                 { name: 'Git', svg: '/svg/git-svgrepo-com.svg' },
+                { name: 'Github', svg: '/svg/github-colored-svgrepo-com.svg' },
                 { name: 'NPM', svg: '/svg/npm-svgrepo-com.svg' },
                 {
                     name: 'AWS S3',
@@ -57,8 +63,11 @@ function Skills() {
                     ),
                 },
                 { name: 'ChatGPT', svg: '/svg/ChatGPT_logo.svg' },
-                { name: 'JWT', svg: '/svg/jwt-3.svg' },
-                { name: 'Axios', svg: '/svg/axios.svg' },
+                {
+                    name: 'Digital Ocean',
+                    svg: '/svg/digital-ocean-svgrepo-com.svg',
+                },
+                { name: '', svg: '' },
             ],
         },
     ]
@@ -105,7 +114,7 @@ function Skills() {
                             onClick={() => setSlideIndex(i)}
                             className={`grid h-fit cursor-pointer items-center border-b border-primary-neutral p-4 md:p-8 lg:min-h-[70vh] lg:border-b-0 lg:border-r ${slideIndex === i ? 'bg-primary-neutral text-secondary-neutral' : 'bg-secondary-neutral text-primary-neutral'}`}
                         >
-                            <span className="flex items-center gap-2 text-xl md:text-[2.5rem]">
+                            <span className="flex items-center gap-2 text-xl leading-[1] md:text-[2.5rem]">
                                 {title}
                                 <ReactSVG
                                     src="/svg/icon-next.svg"

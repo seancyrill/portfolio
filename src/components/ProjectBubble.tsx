@@ -52,14 +52,9 @@ function ProjectBubble({
         }
     }, [])
 
-    function projectLink(link: 'gh' | 'live', ghIndex: number = 0) {
-        const href = link === 'gh' ? ghLink[ghIndex] : liveLink
-        return href
-    }
-
     function handleProjectClick() {
         if (isHovering) {
-            const href = projectLink('live')
+            const href = liveLink[0]
             window.open(href, '_blank')
             toggleFocus(false)
         } else {
@@ -81,8 +76,7 @@ function ProjectBubble({
                 <div
                     className={`smooth-animation absolute left-0 top-0 flex origin-bottom -translate-y-full scale-y-0 gap-1 ${isHovering && 'scale-y-100'}`}
                 >
-                    {ghLink.map(({}, i) => {
-                        const href = projectLink('gh', i)
+                    {ghLink.map((href, i) => {
                         return (
                             <a href={href} key={`ghLink${i}`} target="_blank">
                                 <ReactSVG
@@ -96,15 +90,20 @@ function ProjectBubble({
                             </a>
                         )
                     })}
-                    <a href={projectLink('live')} target="_blank">
-                        <ReactSVG
-                            src="/svg/open.svg"
-                            className="rounded-t-full bg-primary-neutral bg-opacity-30 px-2 py-1 text-primary-neutral"
-                            beforeInjection={(svg) => {
-                                svg.classList.add('project-svg')
-                            }}
-                        />
-                    </a>
+                    {liveLink.map((href, i) => {
+                        return (
+                            <a href={href} key={`liveLink${i}`} target="_blank">
+                                <ReactSVG
+                                    src="/svg/open.svg"
+                                    key={`livelink${i}`}
+                                    className="rounded-t-full bg-primary-neutral bg-opacity-30 px-2 py-1 text-primary-neutral"
+                                    beforeInjection={(svg) => {
+                                        svg.classList.add('project-svg')
+                                    }}
+                                />
+                            </a>
+                        )
+                    })}
                 </div>
 
                 {/* Project Img */}
@@ -118,7 +117,8 @@ function ProjectBubble({
                         <img
                             src={images[0]}
                             alt="project-bg"
-                            className="absolute top-1/2 z-0 h-[110%] w-[120%] -translate-y-1/2 object-cover"
+                            className="absolute top-1/2 z-0 h-[105%] w-[120%] -translate-y-1/2 object-cover"
+                            title={title}
                         />
                     </div>
                 </div>
@@ -133,7 +133,7 @@ function ProjectBubble({
                             {title}
                         </h2>
                         <div className="flex flex-wrap items-center gap-4 md:m-1 md:w-1/2 md:justify-end">
-                            {tech.map(({ svg }, i) => (
+                            {tech.map(({ svg, name }, i) => (
                                 <div
                                     key={i}
                                     className="flex-col items-center justify-center"
@@ -142,6 +142,7 @@ function ProjectBubble({
                                         src={svg}
                                         alt="techlogo"
                                         className="size-6"
+                                        title={name}
                                     />
                                 </div>
                             ))}

@@ -12,33 +12,54 @@ export type ProjectListType = {
         name: string
         svg: string
     }[]
-    liveLink: string
+    liveLink: string[]
     ghLink: string[]
 }
 
 const list = [
+    {
+        title: 'REELO DYNAMIC MARKETING',
+        images: ['/images/dmp1.png'],
+        desc: 'A dynamic, personalized marketing page showcasing an agent’s listing, demonstrating Reelo’s ability to transform a standard property listing into a professional real-estate video.',
+        note: 'App cannot generate new pages anymore, the links are hardcoded just for showcase.',
+        tech: [
+            { name: 'Next.js', svg: '/svg/next-js-svgrepo-com.svg' },
+            {
+                name: 'Typescript',
+                svg: '/svg/typescript-official-svgrepo-com.svg',
+            },
+            { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
+            { name: 'PostgreSQL', svg: '/svg/postgresql-icon.svg' },
+            { name: 'Prisma', svg: '/svg/prisma-white-svgrepo-com.svg' },
+        ],
+        liveLink: [
+            'https://sean-dmp-showcase.netlify.app/101',
+            'https://sean-dmp-showcase.netlify.app/102',
+        ],
+        ghLink: ['https://github.com/seancyrill/dynamic-marketing-page'],
+    },
     {
         title: 'SHOPPING',
         images: ['/images/ecom-product-page.jpg'],
         desc: 'Ecommerce site for both buying and selling. Users can set up their own shops for other users to buy. Guest are welcome!',
         note: 'Node app is deployed on free Render server that spins down on inactivity, please give it a minute to wake up.',
         tech: [
-            { name: 'react', svg: '/svg/react-svgrepo-com.svg' },
+            { name: 'React.js', svg: '/svg/react-svgrepo-com.svg' },
             {
-                name: 'typescript',
+                name: 'Typescript',
                 svg: '/svg/typescript-official-svgrepo-com.svg',
             },
-            { name: 'tailwind', svg: '/svg/tailwind-svgrepo-com.svg' },
-            { name: 'node', svg: '/svg/node-js-svgrepo-com.svg' },
-            { name: 'express', svg: '/svg/express-svgrepo-com-white.svg' },
-            { name: 'postgresql', svg: '/svg/postgresql-icon.svg' },
+            { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
+            { name: 'Node.js', svg: '/svg/node-js-svgrepo-com.svg' },
+            { name: 'Express.js', svg: '/svg/express-svgrepo-com-white.svg' },
+            { name: 'PostgreSQL', svg: '/svg/postgresql-icon.svg' },
             { name: 'JWT', svg: '/svg/jwt-3.svg' },
             {
                 name: 'AWS',
                 svg: '/svg/Amazon_Lambda_architecture_logo.svg',
             },
         ],
-        liveLink: 'https://sean-shpg.netlify.app',
+        liveLink: ['https://sean-shpg.netlify.app'],
         ghLink: [
             'https://github.com/seancyrill/sean-shpg-frontend',
             'https://github.com/seancyrill/sean-shpg-backend',
@@ -50,31 +71,15 @@ const list = [
         desc: 'Travel to SPACE, sit back, and relax because we’ll give you a truly out of this world experience!',
         note: 'Navigate easily through the list and pages with scroll/swipe controls. ',
         tech: [
-            { name: 'react', svg: '/svg/react-svgrepo-com.svg' },
+            { name: 'React.js', svg: '/svg/react-svgrepo-com.svg' },
             {
-                name: 'typescript',
+                name: 'Typescript',
                 svg: '/svg/typescript-official-svgrepo-com.svg',
             },
-            { name: 'tailwind', svg: '/svg/tailwind-svgrepo-com.svg' },
+            { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
         ],
-        liveLink: 'https://space-tourism-seandg.netlify.app/',
+        liveLink: ['https://space-tourism-seandg.netlify.app/'],
         ghLink: ['https://github.com/seancyrill/space-tourism-website'],
-    },
-    {
-        title: 'Rest Countries',
-        images: ['/images/rest-countries.jpg'],
-        desc: 'A site working with REST Countries API. Filter or search results by name, region language etc. With togglable dark mode.',
-        note: null,
-        tech: [
-            { name: 'react', svg: '/svg/react-svgrepo-com.svg' },
-            {
-                name: 'typescript',
-                svg: '/svg/typescript-official-svgrepo-com.svg',
-            },
-            { name: 'tailwind', svg: '/svg/tailwind-svgrepo-com.svg' },
-        ],
-        liveLink: 'https://sean-rest-countries.netlify.app/',
-        ghLink: ['https://github.com/seancyrill/rest-countries'],
     },
 ]
 

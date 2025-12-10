@@ -1,7 +1,7 @@
-import { ReactSVG } from 'react-svg'
-import ProjectBubble from '../components/ProjectBubble'
-import MovingDashedBorder from '../components/MovingDashedBorder'
 import { useState } from 'react'
+import { ReactSVG } from 'react-svg'
+import MovingDashedBorder from '../components/MovingDashedBorder'
+import ProjectBubble from '../components/ProjectBubble'
 
 export type ProjectListType = {
     title: string
@@ -17,27 +17,6 @@ export type ProjectListType = {
 }
 
 const list = [
-    {
-        title: 'REELO DYNAMIC MARKETING',
-        images: ['/images/dmp1.png'],
-        desc: 'A dynamic, personalized marketing page showcasing an agent’s listing, demonstrating Reelo’s ability to transform a standard property listing into a professional real-estate video.',
-        note: 'App cannot generate new pages anymore, the links are hardcoded just for showcase.',
-        tech: [
-            { name: 'Next.js', svg: '/svg/next-js-svgrepo-com.svg' },
-            {
-                name: 'Typescript',
-                svg: '/svg/typescript-official-svgrepo-com.svg',
-            },
-            { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
-            { name: 'PostgreSQL', svg: '/svg/postgresql-icon.svg' },
-            { name: 'Prisma', svg: '/svg/prisma-white-svgrepo-com.svg' },
-        ],
-        liveLink: [
-            'https://sean-dmp-showcase.netlify.app/101',
-            'https://sean-dmp-showcase.netlify.app/102',
-        ],
-        ghLink: ['https://github.com/seancyrill/dynamic-marketing-page'],
-    },
     {
         title: 'SHOPPING',
         images: ['/images/ecom-product-page.jpg'],

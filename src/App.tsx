@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
+import InitialLoading from './components/InitialLoading'
 import Nav from './components/Nav'
+import ScrollHint from './components/ScrolHhint'
 import Contact from './sections/Contact'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import Welcome from './sections/Welcome'
-import InitialLoading from './components/InitialLoading'
 
 function App() {
     const [splinesLoaded, setSplinesLoaded] = useState([false, false])
@@ -28,6 +29,7 @@ function App() {
             <Skills />
             <Projects />
             <Contact setSplinesLoaded={setSplinesLoaded} />
+            <ScrollHint />
         </main>
     )
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { ProjectListType } from '../sections/Projects'
 import { ReactSVG } from 'react-svg'
+import { ProjectListType } from '../sections/Projects'
 
 type ProjectBubbleType = {
     i: number
@@ -112,7 +112,7 @@ function ProjectBubble({
                     onClick={handleProjectClick}
                 >
                     <div
-                        className={`smooth-animation relative h-full w-full overflow-hidden ${isHovering && '-translate-y-[100px]'}`}
+                        className={`smooth-animation relative h-full w-full overflow-hidden`}
                     >
                         <img
                             src={images[0]}
@@ -125,7 +125,7 @@ function ProjectBubble({
 
                 {/* Project Headers */}
                 <div
-                    className={`smooth-animation smooth-animation relative left-0 top-0 flex w-full origin-top-left flex-col justify-between bg-transparent text-primary-neutral hover:scale-100 ${isHovering && '-translate-y-[100px]'}`}
+                    className={`smooth-animation smooth-animation relative left-0 top-0 flex w-full origin-top-left flex-col justify-between bg-transparent text-primary-neutral transition-all duration-500 ease-in-out hover:scale-100 ${isHovering ? 'max-h-screen' : 'max-h-24'}`}
                     onClick={handleProjectClick}
                 >
                     <div className="flex w-full flex-col justify-between md:flex-row md:gap-2">
@@ -159,7 +159,7 @@ function ProjectBubble({
                             <p
                                 className={`border-dashed border-primary-neutral/30 py-2 italic ${isHovering ? 'border-t' : 'border-t-0'}`}
                             >
-                                ps: {note}
+                                {note}
                             </p>
                         )}
                     </div>

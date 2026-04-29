@@ -18,6 +18,22 @@ export type ProjectListType = {
 
 const list = [
     {
+        title: 'AUTO LOANS',
+        images: ['/images/auto-loans.png'],
+        desc: 'An automated application system that streamlines loan processing for major financing companies. Developed with Next.js, pdf-lib, and Nodemailer, it replaces manual branch visits with instant document generation and automated consultant routing, significantly reducing application turnaround time.',
+        note: 'App does not use any database or store any data anywhere but the users device to support form persistence.',
+        tech: [
+            { name: 'Next.js', svg: '/svg/next-js-svgrepo-com.svg' },
+            {
+                name: 'Typescript',
+                svg: '/svg/typescript-official-svgrepo-com.svg',
+            },
+            { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
+        ],
+        liveLink: ['https://auto-loans.netlify.app'],
+        ghLink: ['https://github.com/seancyrill/auto-loans'],
+    },
+    {
         title: 'REELO DYNAMIC MARKETING',
         images: ['/images/dmp1.png'],
         desc: 'A dynamic, personalized marketing page showcasing an agent’s listing, demonstrating Reelo’s ability to transform a standard property listing into a professional real-estate video.',
@@ -68,8 +84,8 @@ const list = [
     {
         title: 'Space Tourism',
         images: ['/images/space-tourism2.jpg'],
-        desc: 'Travel to SPACE, sit back, and relax because we’ll give you a truly out of this world experience!',
-        note: 'Navigate easily through the list and pages with scroll/swipe controls. ',
+        desc: 'Travel to SPACE, sit back, and relax because we’ll give you a truly out of this world experience! Navigate easily through the list and pages with scroll/swipe controls.',
+        note: "This is one of my earliest projects I've done, it was a challenge from frontend mentor. It made me really enjoy building sites and taking the challenges, I even added some of my twists that I think could improve the project.",
         tech: [
             { name: 'React.js', svg: '/svg/react-svgrepo-com.svg' },
             {
@@ -97,7 +113,7 @@ const endLinks = [
 ]
 
 function Projects() {
-    const [focusStates, setFocusStates] = useState([false, false, false])
+    const [focusStates, setFocusStates] = useState([false, false, false, false])
     const isFocusing = focusStates.some((val) => val)
 
     return (

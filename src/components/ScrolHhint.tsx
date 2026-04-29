@@ -35,10 +35,8 @@ export default function ScrollHint() {
 
     return (
         <div
-            className={`pointer-events-none fixed bottom-0 right-0 mb-8 mr-12 flex items-center gap-3 transition-opacity duration-700 ${
-                visible
-                    ? 'animate-pulse opacity-100'
-                    : 'pointer-events-none opacity-0'
+            className={`pointer-events-none absolute bottom-0 right-0 mb-8 mr-12 flex items-center gap-3 transition-opacity duration-700 ${
+                visible ? 'animate-pulse opacity-100' : 'opacity-0'
             }`}
         >
             <div

@@ -29,7 +29,9 @@ function App() {
             <Skills />
             <Projects />
             <Contact setSplinesLoaded={setSplinesLoaded} />
-            <ScrollHint />
+            <div className="pointer-events-none fixed inset-0 mx-auto w-full max-w-screen-2xl">
+                <ScrollHint />
+            </div>
         </main>
     )
 }

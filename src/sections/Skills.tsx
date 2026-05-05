@@ -13,10 +13,10 @@ function Skills() {
                     name: 'Typescript',
                     svg: '/svg/typescript-official-svgrepo-com.svg',
                 },
-                { name: 'PostgreSQL', svg: '/svg/postgresql-icon.svg' },
                 { name: 'Javascript', svg: '/svg/js-svgrepo-com.svg' },
                 { name: 'HTML5', svg: '/svg/html-5-svgrepo-com.svg' },
                 { name: 'CSS3', svg: '/svg/css-3-svgrepo-com.svg' },
+                { name: 'PostgreSQL', svg: '/svg/postgresql-icon.svg' },
                 { name: '', svg: '' },
             ],
         },
@@ -25,14 +25,14 @@ function Skills() {
             logo: '/svg/laboratory-svgrepo-com.svg',
             skills: [
                 { name: 'Next.js', svg: '/svg/next-js-svgrepo-com.svg' },
-                { name: 'React.js', svg: '/svg/react-svgrepo-com.svg' },
+                { name: 'React', svg: '/svg/react-svgrepo-com.svg' },
                 { name: 'Node.js', svg: '/svg/node-js-svgrepo-com.svg' },
-                { name: 'Express', svg: '/svg/express-svgrepo-com.svg' },
+                { name: 'ExpressJS', svg: '/svg/express-svgrepo-com.svg' },
                 { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
                 { name: 'Prisma', svg: '/svg/prisma-svgrepo-com.svg' },
-                { name: 'Axios', svg: '/svg/axios.svg' },
-                { name: 'JWT', svg: '/svg/jwt-3.svg' },
-                { name: '', svg: '' },
+                { name: 'Jest', svg: '/svg/Jest.svg' },
+                { name: 'Stripe', svg: '/svg/Stripe wordmark - Blurple.svg' },
+                { name: 'Nodemailer', svg: 'svg/nodemailer.svg' },
             ],
         },
         {
@@ -51,7 +51,7 @@ function Skills() {
                     svg: '/svg/Amazon_Lambda_architecture_logo.svg',
                 },
                 { name: 'VSCode', svg: '/svg/vs-code-svgrepo-com.svg' },
-                { name: 'Vite', svg: '/svg/vite-svgrepo-com.svg' },
+                { name: 'Supabase', svg: '/svg/supabase-logo-icon.svg' },
                 { name: 'Netlify', svg: '/svg/netlify-svgrepo-com.svg' },
                 {
                     name: 'Render',
@@ -62,7 +62,7 @@ function Skills() {
                         />
                     ),
                 },
-                { name: 'ChatGPT', svg: '/svg/ChatGPT_logo.svg' },
+                { name: 'Claude', svg: '/svg/claude-color.svg' },
                 {
                     name: 'Digital Ocean',
                     svg: '/svg/digital-ocean-svgrepo-com.svg',
@@ -75,10 +75,7 @@ function Skills() {
     return (
         <>
             <div className="h-40 bg-gradient-to-t from-secondary-neutral to-primary-neutral" />
-            <section
-                id="skills"
-                className="min-h-[100svh] select-none overflow-hidden bg-secondary-neutral"
-            >
+            <section className="min-h-[100svh] select-none overflow-hidden bg-secondary-neutral">
                 <div className="flex h-[50vh] items-end px-4">
                     <h3 className="flex w-full items-center justify-between gap-4 font-header text-4xl font-light text-primary-neutral">
                         <span className="h-fit w-1/2 border-t" />
@@ -89,7 +86,10 @@ function Skills() {
                     </h3>
                 </div>
                 <div className="h-screen" />
-                <div className="flex w-fit border-y-4 border-primary-neutral">
+                <div
+                    className="flex w-fit border-y-4 border-primary-neutral"
+                    id="skills"
+                >
                     {[...Array(2)].map((_, i) => (
                         <h1
                             key={i}

@@ -105,11 +105,6 @@ const endLinks = [
         name: 'My Reposities',
         src: '/svg/github-colored-svgrepo-com.svg',
     },
-    {
-        to: 'https://www.frontendmentor.io/profile/seancyrill',
-        name: 'Challenges Conquered',
-        src: '/svg/frontend-mentor-seeklogo.svg',
-    },
 ]
 
 function Projects() {

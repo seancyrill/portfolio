@@ -6,66 +6,68 @@ function Skills() {
 
     const list = [
         {
-            title: 'Languages & DB',
+            title: 'Languages & Databases',
             logo: '/svg/guest-star-svgrepo-com.svg',
             skills: [
                 {
-                    name: 'Typescript',
+                    name: 'TypeScript',
                     svg: '/svg/typescript-official-svgrepo-com.svg',
                 },
-                { name: 'Javascript', svg: '/svg/js-svgrepo-com.svg' },
+                { name: 'JavaScript (ES6+)', svg: '/svg/js-svgrepo-com.svg' },
                 { name: 'HTML5', svg: '/svg/html-5-svgrepo-com.svg' },
+
                 { name: 'CSS3', svg: '/svg/css-3-svgrepo-com.svg' },
                 { name: 'PostgreSQL', svg: '/svg/postgresql-icon.svg' },
                 { name: '', svg: '' },
             ],
         },
         {
-            title: 'Frameworks',
+            title: 'Frameworks & Libraries',
             logo: '/svg/laboratory-svgrepo-com.svg',
             skills: [
                 { name: 'Next.js', svg: '/svg/next-js-svgrepo-com.svg' },
-                { name: 'React', svg: '/svg/react-svgrepo-com.svg' },
+                { name: 'React (React.js)', svg: '/svg/react-svgrepo-com.svg' },
                 { name: 'Node.js', svg: '/svg/node-js-svgrepo-com.svg' },
-                { name: 'ExpressJS', svg: '/svg/express-svgrepo-com.svg' },
+
+                { name: 'Express.js', svg: '/svg/express-svgrepo-com.svg' },
                 { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
                 { name: 'Prisma', svg: '/svg/prisma-svgrepo-com.svg' },
+
+                { name: 'Zod', svg: '/svg/Zod--Streamline-Svg-Logos.svg' },
                 { name: 'Jest', svg: '/svg/Jest.svg' },
-                { name: 'Stripe', svg: '/svg/Stripe wordmark - Blurple.svg' },
-                { name: 'Nodemailer', svg: 'svg/nodemailer.svg' },
+                {
+                    name: 'Vitest',
+                    svg: '/svg/Vitest--Streamline-Svg-Logos.svg',
+                },
+
+                {
+                    name: 'RTL',
+                    svg: '/svg/Testing-Library--Streamline-Svg-Logos.svg',
+                },
+                { name: 'Playwright', svg: '/svg/playwright.svg' },
+                { name: '', svg: '' },
             ],
         },
         {
-            title: 'Tools',
+            title: 'Tools & Platforms',
             logo: '/svg/startup-rocket-svgrepo-com.svg',
             skills: [
                 { name: 'Git', svg: '/svg/git-svgrepo-com.svg' },
-                { name: 'Github', svg: '/svg/github-colored-svgrepo-com.svg' },
+                { name: 'GitHub', svg: '/svg/github-colored-svgrepo-com.svg' },
                 { name: 'NPM', svg: '/svg/npm-svgrepo-com.svg' },
-                {
-                    name: 'AWS S3',
-                    svg: '/svg/amazon-s3-svgrepo-com.svg',
-                },
-                {
-                    name: 'AWS Lambda',
-                    svg: '/svg/Amazon_Lambda_architecture_logo.svg',
-                },
-                { name: 'VSCode', svg: '/svg/vs-code-svgrepo-com.svg' },
-                { name: 'Supabase', svg: '/svg/supabase-logo-icon.svg' },
-                { name: 'Netlify', svg: '/svg/netlify-svgrepo-com.svg' },
-                {
-                    name: 'Render',
-                    img: (
-                        <img
-                            src="/svg/renderco_logo.svg"
-                            className="w-[40px] bg-white invert"
-                        />
-                    ),
-                },
+
+                { name: 'VS Code', svg: '/svg/vs-code-svgrepo-com.svg' },
+                { name: 'AWS', svg: '/svg/Aws--Streamline-Svg-Logos.svg' },
+                { name: 'Supabase (RLS)', svg: '/svg/supabase-logo-icon.svg' },
+
+                { name: 'Stripe', svg: '/svg/Stripe wordmark - Blurple.svg' },
+                { name: 'OAuth', svg: '/svg/oauth.svg' },
+                { name: 'CI/CD', svg: '/svg/githubactions.svg' },
+
                 { name: 'Claude', svg: '/svg/claude-color.svg' },
                 {
-                    name: 'Digital Ocean',
-                    svg: '/svg/digital-ocean-svgrepo-com.svg',
+                    name: 'Copilot',
+                    svg: '/svg/Github-Copilot--Streamline-Svg-Logos.svg',
                 },
                 { name: '', svg: '' },
             ],
@@ -114,7 +116,10 @@ function Skills() {
                             onClick={() => setSlideIndex(i)}
                             className={`grid h-fit cursor-pointer items-center border-b border-primary-neutral p-4 md:p-8 lg:min-h-[70vh] lg:border-b-0 lg:border-r ${slideIndex === i ? 'bg-primary-neutral text-secondary-neutral' : 'bg-secondary-neutral text-primary-neutral'}`}
                         >
-                            <span className="flex items-center gap-2 text-xl leading-[1] md:text-[2.5rem]">
+                            <span
+                                className="flex items-center gap-2 text-xl leading-[1] md:text-[2.5rem]"
+                                aria-label={title}
+                            >
                                 {title}
                                 <ReactSVG
                                     src="/svg/icon-next.svg"

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { ReactSVG } from 'react-svg'
-import Sidebar from './Sidebar'
 import Resume from './Resume'
+import Sidebar from './Sidebar'
 
 function Nav() {
     const [openSideBar, setOpenSideBar] = useState(false)
@@ -38,11 +38,6 @@ function Nav() {
             name: 'LinkedIn',
             to: 'http://www.linkedin.com/in/seancyrill',
             vector: '/svg/linkedin-rounded-svgrepo-com.svg',
-        },
-        {
-            name: 'Frontend Mentor',
-            to: 'https://www.frontendmentor.io/profile/seancyrill',
-            vector: '/svg/frontend-mentor-seeklogo.svg',
         },
     ]
 

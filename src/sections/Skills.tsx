@@ -57,18 +57,25 @@ function Skills() {
                 { name: 'NPM', svg: '/svg/npm-svgrepo-com.svg' },
 
                 { name: 'VS Code', svg: '/svg/vs-code-svgrepo-com.svg' },
-                { name: 'AWS', svg: '/svg/Aws--Streamline-Svg-Logos.svg' },
-                { name: 'Supabase (RLS)', svg: '/svg/supabase-logo-icon.svg' },
-
-                { name: 'Stripe', svg: '/svg/Stripe wordmark - Blurple.svg' },
-                { name: 'OAuth', svg: '/svg/oauth.svg' },
+                { name: 'Cursor', svg: '/svg/CUBE_25D.svg' },
                 { name: 'CI/CD', svg: '/svg/githubactions.svg' },
 
+                { name: 'AWS', svg: '/svg/Aws--Streamline-Svg-Logos.svg' },
+                { name: 'Supabase (RLS)', svg: '/svg/supabase-logo-icon.svg' },
+                { name: 'Stripe', svg: '/svg/Stripe wordmark - Blurple.svg' },
+
+                { name: 'OAuth', svg: '/svg/oauth.svg' },
                 { name: 'Claude', svg: '/svg/claude-color.svg' },
                 {
                     name: 'Copilot',
                     svg: '/svg/Github-Copilot--Streamline-Svg-Logos.svg',
                 },
+
+                {
+                    name: 'Antigravity (Gemini)',
+                    svg: '/svg/antigravity-color.svg',
+                },
+                { name: 'Codex (OpenAI)', svg: '/svg/codex-color.svg' },
                 { name: '', svg: '' },
             ],
         },

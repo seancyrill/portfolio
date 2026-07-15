@@ -18,10 +18,26 @@ export type ProjectListType = {
 
 const list = [
     {
+        title: 'Pulse',
+        images: ['/images/pulse.png'],
+        desc: 'A peer-to-peer WebRTC chat app that lets users connect directly for video and messaging without routing through a central server. It features server-issued HMAC-signed tokens for secure signaling and a perfect negotiation pattern for reliable connection handling.',
+        note: 'You will need 2 browsers tabs to test the app.',
+        tech: [
+            { name: 'Next.js', svg: '/svg/next-js-svgrepo-com.svg' },
+            { name: 'Tailwind CSS', svg: '/svg/tailwind-svgrepo-com.svg' },
+            { name: 'PostgreSQL', svg: '/svg/postgresql-icon.svg' },
+            { name: 'Prisma', svg: '/svg/prisma-white-svgrepo-com.svg' },
+            { name: 'WebRTC', svg: '/svg/webrtc-svgrepo-com.svg' },
+            { name: 'Mapbox', svg: '/svg/mapbox-icon-svgrepo-com.svg' },
+        ],
+        liveLink: ['https://sean-pulse.vercel.app/'],
+        ghLink: ['https://github.com/seancyrill/pulse'],
+    },
+    {
         title: 'AUTO LOANS',
         images: ['/images/auto-loans.png'],
         desc: 'An automated application system that streamlines loan processing for major financing companies. Developed with Next.js, pdf-lib, and Nodemailer, it replaces manual branch visits with instant document generation and automated consultant routing, significantly reducing application turnaround time.',
-        note: 'App does not use any database or store any data anywhere but the users device to support form persistence.',
+        note: 'App does not use any database or store any data anywhere but the users device to support form persistence while minimizing expenses.',
         tech: [
             { name: 'Next.js', svg: '/svg/next-js-svgrepo-com.svg' },
             {
@@ -108,16 +124,16 @@ const endLinks = [
 ]
 
 function Projects() {
-    const [focusStates, setFocusStates] = useState([false, false, false, false])
+    const [focusStates, setFocusStates] = useState(list.map(() => false))
     const isFocusing = focusStates.some((val) => val)
 
     return (
         <>
             <section className="relative min-h-screen" id="projects">
-                <div className="sticky left-0 top-0 z-0 grid min-h-screen w-full select-none place-content-center">
+                <div className="sticky left-0 top-0 z-0 grid min-h-svh w-full select-none place-content-center">
                     <span className="overflow-clip">
                         <h1
-                            className={`title-popup smooth-animation text-center text-titleWall ${isFocusing ? 'text-secondary-neutral/10' : 'text-secondary-neutral'}`}
+                            className={`title-popup smooth-animation text-center text-titleWall ${isFocusing ? 'text-secondary-neutral/10 blur-md' : 'text-secondary-neutral'}`}
                         >
                             PROJECTS
                         </h1>
@@ -126,7 +142,7 @@ function Projects() {
                 <div className="h-40 bg-gradient-to-t from-secondary-neutral to-primary-neutral" />
 
                 <div
-                    className={`smooth-animation relative pt-[50svh] backdrop-invert`}
+                    className={`smooth-animation relative pt-[30svh] backdrop-invert`}
                 >
                     <div className="">
                         {list.map((project, i) => (

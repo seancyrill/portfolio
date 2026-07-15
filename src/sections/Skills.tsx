@@ -85,16 +85,7 @@ function Skills() {
         <>
             <div className="h-40 bg-gradient-to-t from-secondary-neutral to-primary-neutral" />
             <section className="min-h-[100svh] select-none overflow-hidden bg-secondary-neutral">
-                <div className="flex h-[50vh] items-end px-4">
-                    <h3 className="flex w-full items-center justify-between gap-4 font-header text-4xl font-light text-primary-neutral">
-                        <span className="h-fit w-1/2 border-t" />
-                        <span className="text-right">
-                            Crafting digital experiences that captivate and
-                            inspire, one line of code at a time.
-                        </span>
-                    </h3>
-                </div>
-                <div className="h-screen" />
+                <div className="h-[10svh]" />
                 <div
                     className="flex w-fit border-y-4 border-primary-neutral"
                     id="skills"
@@ -121,7 +112,7 @@ function Skills() {
                             key={`skillset${i}`}
                             onMouseOver={() => setSlideIndex(i)}
                             onClick={() => setSlideIndex(i)}
-                            className={`grid h-fit cursor-pointer items-center border-b border-primary-neutral p-4 md:p-8 lg:min-h-[70vh] lg:border-b-0 lg:border-r ${slideIndex === i ? 'bg-primary-neutral text-secondary-neutral' : 'bg-secondary-neutral text-primary-neutral'}`}
+                            className={`grid h-fit cursor-pointer items-center border-b border-primary-neutral p-4 md:p-6 lg:min-h-[70vh] lg:border-b-0 lg:border-r ${slideIndex === i ? 'bg-primary-neutral text-secondary-neutral' : 'bg-secondary-neutral text-primary-neutral'}`}
                         >
                             <span
                                 className="flex items-center gap-2 text-xl leading-[1] md:text-[2.5rem]"

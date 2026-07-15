@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { ReactSVG } from 'react-svg'
 import { ProjectListType } from '../sections/Projects'
 
@@ -7,6 +7,32 @@ type ProjectBubbleType = {
     project: ProjectListType
     isHovering: boolean
     setFocusStates: React.Dispatch<React.SetStateAction<boolean[]>>
+}
+
+// Randomized fallback pool for any project index beyond the hand-picked ones
+const RANDOM_POSITION_VARIANTS = [
+    'justify-end pr-8 pt-8',
+    'justify-start pl-8 pt-8',
+    'justify-center',
+    'justify-end pr-16 pt-4',
+    'justify-start pl-16 pt-4',
+    '-mb-[10vh] justify-end pr-8',
+    '-mb-[10vh] justify-start pl-8',
+]
+
+function getPositionClasses(i: number): string {
+    switch (i) {
+        case 0:
+            return 'justify-end pr-8 pt-8'
+        case 1:
+            return '-mb-[20vh] justify-start pl-8 pt-8'
+        case 2:
+            return 'justify-center'
+        default:
+            return RANDOM_POSITION_VARIANTS[
+                Math.floor(Math.random() * RANDOM_POSITION_VARIANTS.length)
+            ]
+    }
 }
 
 function ProjectBubble({
@@ -18,6 +44,9 @@ function ProjectBubble({
     const projectRef = useRef<HTMLDivElement>(null)
     const { desc, ghLink, liveLink, title, images, tech, note } = project
 
+    // picked once per index so it doesn't reshuffle on re-render/hover
+    const positionClasses = useMemo(() => getPositionClasses(i), [i])
+
     function toggleFocus(input?: boolean) {
         setFocusStates((prev) =>
             prev.map((prevState, prevIndex) => {
@@ -28,7 +57,6 @@ function ProjectBubble({
         )
     }
 
-    //unfocuses project when its going out of view(for mobile)
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -36,9 +64,7 @@ function ProjectBubble({
                     toggleFocus(false)
                 }
             },
-            {
-                threshold: 0.4,
-            }
+            { threshold: 0.4 }
         )
 
         if (projectRef.current) {
@@ -64,18 +90,16 @@ function ProjectBubble({
 
     return (
         <div
-            className={`smooth-animation flex items-center p-4 py-[10vh] font-header sm:px-20 md:px-40 ${i === 0 && 'justify-end pr-8 pt-8'} ${i === 1 && '-mb-[20vh] justify-start pl-8 pt-8'} ${i === 2 && 'justify-center'}`}
+            className={`smooth-animation flex items-center p-4 py-[10vh] font-header sm:px-20 md:px-40 ${positionClasses}`}
         >
             <article
                 ref={projectRef}
                 onMouseEnter={() => toggleFocus(true)}
                 onMouseLeave={() => toggleFocus(false)}
-                className={`relative flex h-[75vh] w-[35%] min-w-[170px] cursor-pointer flex-col bg-transparent text-black ${i === 1 && `scroll-animation scroll-slide`}`}
+                className={`group relative flex h-[75vh] w-[35%] min-w-[170px] cursor-pointer flex-col overflow-hidden bg-transparent text-black ${i === 1 && `scroll-animation scroll-slide`}`}
             >
                 {/* Project links */}
-                <div
-                    className={`smooth-animation absolute left-0 top-0 flex origin-bottom -translate-y-full scale-y-0 gap-1 ${isHovering && 'scale-y-100'}`}
-                >
+                <div className={`smooth-animation flex gap-1`}>
                     {ghLink.map((href, i) => {
                         return (
                             <a href={href} key={`ghLink${i}`} target="_blank">

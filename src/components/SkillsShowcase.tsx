@@ -33,7 +33,7 @@ function SkillsShowcase({ skills }: SkillsShowcaseType) {
 
     return (
         <div className="flex min-h-[70vh] flex-col items-center justify-center overflow-hidden border-y border-secondary-neutral bg-secondary-neutral lg:border-x">
-            <div className="relative flex w-[300px] rotate-[30deg] -skew-y-12 flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl border border-primary-neutral bg-primary-neutral p-8 shadow-[40px_25px_75px] shadow-primary-neutral">
+            <div className="relative flex w-[300px] rotate-[30deg] -skew-y-12 flex-col items-center justify-center gap-5 overflow-hidden rounded-2xl border border-primary-neutral bg-primary-neutral p-8 shadow-[40px_25px_75px] shadow-primary-neutral">
                 {skillDsiplay &&
                     skillDsiplay.map((group, groupIndex) => (
                         <div className="flex" key={`skillgroup${groupIndex}`}>
